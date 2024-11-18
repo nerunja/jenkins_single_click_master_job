@@ -3,15 +3,15 @@ Jenkins_single_click
 
 #!/bin/bash
 gsheettabname="SevaRunTestRunDay2"
-project_webstore="https://cicd-jenkins.myorg.com:8443/jenkins/view/kOS/view/kOS-Relprod/job/kOS-Mosaic-Integration/job/WebStoreIntegrationTestOrderPlacement"
+project_webstore="https://cicd-jenkins.myorg.com:8443/jenkins/view/job/WebStoreIntegrationTestOrderPlacement"
 project_oms="https://cfs-jenkins.myorg.com:8443/job/OMS_Order_Processing"
-project_store="https://cfs-jenkins.myorg.com:8443/job/QCoE_BOSS_IntegrationTesting_Stores"
-project_taxware="https://cfs-jenkins.myorg.com:8443/job/Seva_Taxware_Validations"
-project_day1="https://cfs-jenkins.myorg.com:8443/job/seva_day1_validation"
-project_day2report="https://cfs-jenkins.myorg.com:8443/job/Seva_Day2_Validations"
+project_store="https://cfs-jenkins.myorg.com:8443/job/QCoE_IntegrationTesting_Stores"
+project_taxware="https://cfs-jenkins.myorg.com:8443/job/Taxware_Validations"
+project_day1="https://cfs-jenkins.myorg.com:8443/job/Taxware_day1_validation"
+project_day2report="https://cfs-jenkins.myorg.com:8443/job/Taxware_Day2_Validations"
 project_day2prereqreport="https://cfs-jenkins.myorg.com:8443/job/OMS_Order_Processing_2"
 
-param_webstore="{\"parameter\": [{\"name\":\"meta.filters\",\"value\":\"\"},{\"name\":\"EnvName\",\"value\":\"VDC-M297104874-25212-270 - ATG AE13\"},{\"name\":\"BROWSER\", \"value\":\"-Dbrowser=chrome -Dbrowser.version=60.0 -Dplatform.name=\\\"Windows 10\\\"\"},{\"name\":\"AdditionalMavenParameters\", \"value\":\"-Dstore.prod.ip=www-rel02.myorgecommerce.com -Dsuite.all=**/**IntegrationTestSuite.* -Dsuite.list=IntegrationTestSuite -Dstore.prod.http.port= -Dstore.prod.https.port= -Dfluentwait=true -Dstory.list=IntegrationTestingOrderCreationUsingAPI -Dgsheet.id=1UWPta1dNJAT3Xj0Mad5rStquZ1oEw_2BwoIHoeVMn-w -Dtestdata.gsheet=true -Dgsheet.name.testdata=SevaQA01 -Dgsheet.id.testdata=1-y69R3wyQ4mARs46h1qKa0dExsDPM9LW_IVEMbsj-go -Dseva.prod.ip=10.208.17.173 -Dkc.tokenized=true -Dseva.prod.ip.accservice=10.208.17.64 -Dseva.prod.sheetname=$gsheettabname -Dseva.prodcsc.ip=10.208.17.187 -Dseva.prod.sheetid=1AWch204ytI3D6zjKDjr1zqU5VAidNjq_3eV6jL98NbM -Dgsheet.saveorder=true\"}]}"
+param_webstore="{\"parameter\": [{\"name\":\"meta.filters\",\"value\":\"\"},{\"name\":\"EnvName\",\"value\":\"VDC-M297104874-25212-270 - ATG AE13\"},{\"name\":\"BROWSER\", \"value\":\"-Dbrowser=chrome -Dbrowser.version=60.0 -Dplatform.name=\\\"Windows 10\\\"\"},{\"name\":\"AdditionalMavenParameters\", \"value\":\"-Dstore.prod.ip=www-rel02.myorgecommerce.com -Dsuite.all=**/**IntegrationTestSuite.* -Dsuite.list=IntegrationTestSuite -Dstore.prod.http.port= -Dstore.prod.https.port= -Dfluentwait=true -Dstory.list=IntegrationTestingOrderCreationUsingAPI -Dgsheet.id=1UWPta1dNJAT3Xj0Mad5rStquZ1oEw_2BwoIHoeVMn-w -Dtestdata.gsheet=true -Dgsheet.name.testdata=SevaQA01 -Dgsheet.id.testdata=1-y69R3wyQ4mARs46h1qKa0dExsDPM9LW_IVEMbsj-go -Dseva.prod.ip=10.30.30.30 -Dkc.tokenized=true -Dseva.prod.ip.accservice=10.20.20.20 -Dseva.prod.sheetname=$gsheettabname -Dseva.prodcsc.ip=10.10.10.10 -Dseva.prod.sheetid=AWXYh204ytI3D6zjKDjr1zqU5VAidNjq_3eV6jL98NbM -Dgsheet.saveorder=true\"}]}"
 param_oms="{\"parameter\": [{\"name\":\"TestGroup\",\"value\":\"OrderProcess\"},{\"name\":\"Environment\", \"value\":\"DEV_015\"},{\"name\":\"Sheetname\", \"value\":\"$gsheettabname\"}]}"
 param_store="{\"parameter\": [{\"name\":\"testEnv\",\"value\":\"isp9921e\"},{\"name\":\"testGroup\", \"value\":\"Integration\"},{\"name\":\"omsEnv\", \"value\":\"DEV_015_CLOUD\"},{\"name\":\"sheetname\", \"value\":\"$gsheettabname\"}]}"
 param_taxware="{\"parameter\":[{\"name\":\"lob\",\"value\":\"webstore\"}]}"
