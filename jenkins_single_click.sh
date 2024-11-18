@@ -27,7 +27,7 @@ user_day2report="jenkins_token_user_b:b26f3d8d69f8e31464352f33588530a3"
 user_project_day2prereqreport="jenkins_token_user_c:611d7f38569cf81407bfe6f3550cbeae"
 
 echo "[INFO][($date)] --------------------------------------------------------------------"
-echo "[INFO][($date)] -------------STARTED TRIGGERING JOB---------------------------------"
+echo "[INFO][($date)] -------------STARTED TRIGGERING JOBS---------------------------------"
 function start_job {
   nextBuildNumber=`curl -k -s $project/api/json --user $jenkins_token| grep -Po '"nextBuildNumber":\K\d+'`
   echo "[INFO] $(date) nextBuildNumber $nextBuildNumber"
